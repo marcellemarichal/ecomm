@@ -1,4 +1,4 @@
-const arrayOfUsers = [];
+export const arrayOfUsers = [];
 
 export function createUserUseCase(nome, email, senha) {
     
