@@ -12,7 +12,7 @@ export const createUserUseCase = (nome, email, senha) => {
     const momentDate = new Date().toLocaleString('pt-br', date)
 
     const userNovo = {
-        id: userId,
+            id: userId,
             nome: nome,
             email: email,
             senha: senha,
