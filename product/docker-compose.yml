@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  product:
+    image: ecomm-product:latest
+    build: marcellemarichal/ecomm-product
+    container_name: my-ecomm-product
+    networks:
+      - compose-bridge
+
+networks:
+  compose-bridge:
+    driver: bridge
