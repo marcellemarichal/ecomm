@@ -1,0 +1,20 @@
+de.categories.aggregate([
+    {$unwind: "$products"},
+    {
+       $project: {
+          _id: 0,
+          PRODUTO: "$products.PRODUTO",
+          DESCRIÇÃO: "$products.DESCRIÇÃO",
+          SLUG: "$products.SLUG",
+          PREÇO_UNITÁRIO: "$products.PREÇO_UNITÁRIO",
+          QUANTIDADE_EM_ESTOQUE: "$products.QUANTIDADE_EM_ESTOQUE",
+          CATEGORIA: {
+            NOME: "$NOME",
+            STATUS: "$STATUS"
+          }
+        }
+    },
+    {
+        $out: "products"
+    }
+])
