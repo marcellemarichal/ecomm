@@ -1,6 +1,6 @@
 db.categories.insertMany([
   {
-    "NOME": "INFORMÁTICA",
+    "NOME": "INFORMATICA",
     "STATUS": "ATIVA"
   },
   {
@@ -12,7 +12,7 @@ db.categories.insertMany([
     "STATUS": "ATIVA"
   },
   {
-    "NOME": "MÓVEIS",
+    "NOME": "MOVEIS",
     "STATUS": "ATIVA"
   },
   {

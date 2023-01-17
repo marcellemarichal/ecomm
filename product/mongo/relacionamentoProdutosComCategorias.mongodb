@@ -4,9 +4,9 @@ de.categories.aggregate([
        $project: {
           _id: 0,
           PRODUTO: "$products.PRODUTO",
-          DESCRIÇÃO: "$products.DESCRIÇÃO",
+          DESCRIÇÃO: "$products.DESCRICAO",
           SLUG: "$products.SLUG",
-          PREÇO_UNITÁRIO: "$products.PREÇO_UNITÁRIO",
+          PREÇO_UNITÁRIO: "$products.PREÇO_UNITARIO",
           QUANTIDADE_EM_ESTOQUE: "$products.QUANTIDADE_EM_ESTOQUE",
           CATEGORIA: {
             NOME: "$NOME",
