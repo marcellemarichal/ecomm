@@ -1,7 +1,0 @@
-
-const ecommProduct = 'ecommm-product';
-
-// Create a new database.
-use(ecommProduct);
-
-

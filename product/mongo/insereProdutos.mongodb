@@ -1,7 +1,7 @@
 db.products.insertMany([
   {
     "PRODUTO": "Notebook Samsung",
-    "DESCRIÇÃO": "Samsung Book Core i5-1135G7, 8G, 256GB SSD, Iris Xe, 15.6\"FHD, W11 Cinza",
+    "DESCRIÇÃO": "Samsung Book Core i5-1135G7, 8G, 256GB SSD, Iris Xe, 15.6, FHD, W11 Cinza",
     "SLUG": "notebook-samsung",
     "PREÇO_UNITÁRIO": 3523,
     "QUANTIDADE_EM_ESTOQUE": 1,
@@ -17,7 +17,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Clean Architecture",
-    "DESCRIÇÃO": "Arquitetura limpa: O guia do artesão para estrutura e design de software por Robert C. Martin (Uncle Bob)",
+    "DESCRIÇÃO": "Arquitetura limpa - O guia do artesão para estrutura e design de software por Robert C. Martin (Uncle Bob)",
     "SLUG": "livro-clean-architecture",
     "PREÇO_UNITÁRIO": 102.9,
     "QUANTIDADE_EM_ESTOQUE": 2,
@@ -41,7 +41,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Monitor Dell 27",
-    "DESCRIÇÃO": "Monitor Dell de 27\" P2722H, Preto",
+    "DESCRIÇÃO": "Monitor Dell de 27 P2722H, Preto",
     "SLUG": "monitor-dell-27",
     "PREÇO_UNITÁRIO": 1889,
     "QUANTIDADE_EM_ESTOQUE": 3,
@@ -57,7 +57,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Jogo de pneus",
-    "DESCRIÇÃO": "Pneu Barum by Continental Aro 13 Bravuris 5hm 175/70r13 82t",
+    "DESCRIÇÃO": "Pneu Barum by Continental Aro 13 Bravuris 5hm 175 70r13 82t",
     "SLUG": "jogo-de-pneus-continental-13",
     "PREÇO_UNITÁRIO": 1276.79,
     "QUANTIDADE_EM_ESTOQUE": 1,
@@ -65,7 +65,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Clean Code",
-    "DESCRIÇÃO": "Código limpo: Habilidades práticas do Agile Software por Robert C. Martin (Uncle Bob)",
+    "DESCRIÇÃO": "Código limpo - Habilidades práticas do Agile Software por Robert C. Martin (Uncle Bob)",
     "SLUG": "livro-clean",
     "PREÇO_UNITÁRIO": 95.17,
     "QUANTIDADE_EM_ESTOQUE": 1,
@@ -73,7 +73,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Galaxy S22 Ultra",
-    "DESCRIÇÃO": "Smartphone Samsung Galaxy S22 Ultra 256GB 5G com caneta S PEN - Preto, Câmera Tripla 108MP + Selfie 40MP, RAM 12GB, Tela 6.8",
+    "DESCRIÇÃO": "Smartphone Samsung Galaxy S22 Ultra 256GB 5G com caneta S PEN - Preto, Câmera Tripla 108MP Selfie 40MP, RAM 12GB, Tela 6.8",
     "SLUG": "celular-galaxy-22-ultra",
     "PREÇO_UNITÁRIO": 8549.1,
     "QUANTIDADE_EM_ESTOQUE": 5,
@@ -81,7 +81,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Macbook Pro 16",
-    "DESCRIÇÃO": "Notebook Apple MacBook Pro de 13 polegadas: Chip M2 da Apple com CPU de oito núcleos e GPU de dez núcleos, de 512 GB SSD - Prateado",
+    "DESCRIÇÃO": "Notebook Apple MacBook Pro de 13 polegadas Chip M2 da Apple com CPU de oito núcleos e GPU de dez núcleos, de 512 GB SSD Prateado",
     "SLUG": "notebook-macbook-pro-16",
     "PREÇO_UNITÁRIO": 31752,
     "QUANTIDADE_EM_ESTOQUE": 1,
@@ -89,7 +89,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Refactoring Improving the Design of Existing Code",
-    "DESCRIÇÃO": "Refatoração: Aperfeiçoando o Design de Códigos Existentes por Martin Fowler",
+    "DESCRIÇÃO": "Refatoração - Aperfeiçoando o Design de Códigos Existentes por Martin Fowler",
     "SLUG": "livro-refactoring",
     "PREÇO_UNITÁRIO": 173.9,
     "QUANTIDADE_EM_ESTOQUE": 1,
@@ -105,7 +105,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Central multimidia",
-    "DESCRIÇÃO": "Kit Combo Central Multimídia 9 Polegadas Mp5 Automotivo Aparelho 2 Din Som Pra Carro Sistema Operacional Android 12 Bluetooth Usb Gps Integrado Conexão Wifi Função Speedplay que Simula Carplay e Android Auto Mais Aplicativos Como Spotify Waze Youtube WhatsApp, Tela Resistiva, Microfone Externo Função Multi Tela 2gb Ram e 32gb de Memória interna, Entradas para Encostos de Cabeça, Comando de Volante e Para Câmera Frontal ou Traseira + Moldura Painel Kia Sorento 2013 a 2014 Cor Preta + Câmera de ré",
+    "DESCRIÇÃO": "Kit Combo Central Multimídia 9 Polegadas Mp5 Automotivo Aparelho 2 Din Som Pra Carro Sistema Operacional Android 12 Bluetooth Usb Gps Integrado Conexão Wifi Função Speedplay que Simula Carplay e Android Auto Mais Aplicativos Como Spotify Waze Youtube WhatsApp, Tela Resistiva, Microfone Externo Função Multi Tela 2gb Ram e 32gb de Memória interna, Entradas para Encostos de Cabeça, Comando de Volante e Para Câmera Frontal ou Traseira, Moldura Painel Kia Sorento 2013 a 2014 Cor Preta, Câmera de ré",
     "SLUG": "central-multimidia-automotiva",
     "PREÇO_UNITÁRIO": 711.18,
     "QUANTIDADE_EM_ESTOQUE": 1,
@@ -113,7 +113,7 @@ db.products.insertMany([
   },
   {
     "PRODUTO": "Building Microservices",
-    "DESCRIÇÃO": "Building Microservices (English Edition) por Sam Newman",
+    "DESCRIÇÃO": "Building Microservices English Edition por Sam Newman",
     "SLUG": "livro-building-microservices",
     "PREÇO_UNITÁRIO": 300.28,
     "QUANTIDADE_EM_ESTOQUE": 2,
