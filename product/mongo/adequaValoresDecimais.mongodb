@@ -1,0 +1,47 @@
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Notebook Samsung" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("3523.00")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Sofá 3 lugares" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("2500.00")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Clean Architecture" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("102.90")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Mesa de jantar 6 lugares" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("3678.98")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "iPhone 13 Pro" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("9176.00")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Monitor Dell 27" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("1889.00")} }
+  ),
+db.products.findOneAndUpdate(
+  {{ "PRODUTO": "Implementing Domain-Driven Design" } , { {"PREÇO_UNITARIO": NumberDecimal("144.07")} }}
+  ,
+  { "PRODUTO": "Jogo de pneus" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("1276.79")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Clean Code" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("95.17")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Galaxy S22 Ultra" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("8549.10")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Macbook Pro 16" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("31752.00")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Refactoring Improving the Design of Existing Code" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("173.90")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Cama queen size" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("3100.00")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Central multimidia" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("711.18")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Building Microservices" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("300.28")} }
+  ),
+db.products.findOneAndUpdate(
+  { "PRODUTO": "Galaxy Tab S8" } , { $set: {"PREÇO_UNITARIO": NumberDecimal("5939.10")} }
+  )
