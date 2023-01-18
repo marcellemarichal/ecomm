@@ -1,5 +1,6 @@
 db.getCollection('users').insertMany([
     {
+        _id: 001,
         primeiroNome: "Josué",
         sobrenome: "Lima",
         email: "josuelima@example.com",
@@ -18,6 +19,7 @@ db.getCollection('users').insertMany([
         },
     },
     {
+        _id: 002,
         primeiroNome: "Fiona",
         sobrenome: "Silva",
         email: "fionasilva@example.com",
@@ -36,6 +38,7 @@ db.getCollection('users').insertMany([
         }
      },
      {
+        _id: 003,
         primeiroNome: "Carlos",
         sobrenome: "Junior",
         email: "carlosjr@example.com",
@@ -55,6 +58,7 @@ db.getCollection('users').insertMany([
     },
 
     {
+        _id: 004,
         primeiroNome: "Julia",
         sobrenome: "Mendes",
         email: "juliamendes@example.com",
@@ -74,6 +78,7 @@ db.getCollection('users').insertMany([
     },
 
     {
+        _id: 005,
         primeiroNome: "Lana",
         sobrenome: "Goulart",
         email: "lanag@example.com",
@@ -93,6 +98,7 @@ db.getCollection('users').insertMany([
     },
 
     {
+        _id: 006,
         primeiroNome: "Lucas",
         sobrenome: "Medeiros",
         email: "medeirosluc@example.com",
