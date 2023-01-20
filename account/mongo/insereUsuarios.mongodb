@@ -1,11 +1,10 @@
 db.getCollection('users').insertMany([
     {
         _id: 001,
-        primeiroNome: "Josué",
-        sobrenome: "Lima",
+        nome: "Josué Lima",
         email: "josuelima@example.com",
         senha: "senhaDoJosue!",
-        dataCriacao: new Date("2023-01-10"),
+        dataCriacao: new ISODate(),
         cpf: "405.596.110-30",
         telefone: "(11) 54887-4974",
         endereco: {
@@ -20,11 +19,10 @@ db.getCollection('users').insertMany([
     },
     {
         _id: 002,
-        primeiroNome: "Fiona",
-        sobrenome: "Silva",
+        nome: "Fiona Silva",
         email: "fionasilva@example.com",
         senha: "fi123ona!",
-        dataCriacao: new Date("2023-01-11"),
+        dataCriacao: new ISODate("2023-01-11"),
         cpf: "974.847.080-62",
         telefone: "(11) 44790-2582",
         endereco: {
@@ -39,11 +37,10 @@ db.getCollection('users').insertMany([
      },
      {
         _id: 003,
-        primeiroNome: "Carlos",
-        sobrenome: "Junior",
+        primeiroNome: "Carlos Junior",
         email: "carlosjr@example.com",
         senha: "carlos54321@",
-        dataCriacao: new Date("2023-01-12"),
+        dataCriacao: new ISODate("2023-01-12"),
         cpf: "499.983.368-99",
         telefone: "(11) 21497-5903",
         endereco: {
@@ -59,11 +56,10 @@ db.getCollection('users').insertMany([
 
     {
         _id: 004,
-        primeiroNome: "Julia",
-        sobrenome: "Mendes",
+        nome: "Julia Mendes",
         email: "juliamendes@example.com",
         senha: "1234ju#",
-        dataCriacao: new Date("2023-01-13"),
+        dataCriacao: new ISODate("2023-01-13"),
         cpf: "257.107.370-20",
         telefone: "(51) 79012-2798",
         endereco: {
@@ -79,11 +75,10 @@ db.getCollection('users').insertMany([
 
     {
         _id: 005,
-        primeiroNome: "Lana",
-        sobrenome: "Goulart",
+        nome: "Lana Goulart",
         email: "lanag@example.com",
         senha: "567@lana",
-        dataCriacao: new Date("2023-01-13"),
+        dataCriacao: new ISODate("2023-01-13"),
         cpf: "442.247.536-34",
         telefone: "(31) 16775-1783",
         endereco: {
@@ -99,11 +94,10 @@ db.getCollection('users').insertMany([
 
     {
         _id: 006,
-        primeiroNome: "Lucas",
-        sobrenome: "Medeiros",
+        nome: "Lucas Medeiros",
         email: "medeirosluc@example.com",
         senha: "medeiro$5432",
-        dataCriacao: new Date("2023-01-14"),
+        dataCriacao: new ISODate("2023-01-14"),
         cpf: "867.905.435-62",
         telefone: "(71) 72787-1824",
         endereco: {
@@ -116,4 +110,22 @@ db.getCollection('users').insertMany([
             uf: "BA"
         },
     },
+    {
+        _id: 007,
+        nome: "Marcos Rodrigues",
+        email: "marcosrodrigues@example.com",
+        senha: "8765marc!",
+        dataCriacao: new ISODate(),
+        cpf: "140.270.419-41",
+        telefone: "(41) 67930-1979",
+        endereco: {
+            logradouro: "Rua Coronel Arthur Ferreira de Abreu",
+            numero: "65",
+            complemento: "5",
+            bairro: "Capão da Imbuia",
+            cep: "82810-070",
+            cidade: "Curitiba",
+            uf: "PR"
+        },
+    }
 ])
