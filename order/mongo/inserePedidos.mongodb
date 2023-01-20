@@ -10,7 +10,7 @@ db.orders.insertMany([
             bairro: "Capão da Imbuia",
             cep: "82810-070",
             cidade: "Curitiba",
-            estado: "PR"
+            uf: "PR"
         },
         pedidos: [{
             produto: "Notebook Samsung",
@@ -37,13 +37,13 @@ db.orders.insertMany([
             bairro: "Centro",
             cep: "35400-970",
             cidade: "Ouro Preto",
-            estado: "MG"
+            uf: "MG",
         },
-        pedidos: {[
+        pedidos: [{
             produto: "iPhone 13 Pro",
             quantidade: 1,
             valorTotalProduto: NumberDecimal(9176.00),
             valorDesconto: NumberDecimal(300.00)
-            ]}        
+    }]        
     }, 
 ])
