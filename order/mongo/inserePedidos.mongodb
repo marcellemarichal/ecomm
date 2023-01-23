@@ -1,0 +1,49 @@
+db.orders.insertMany([
+    {
+        _id: 01,
+        dataPedido: new ISODate(),
+        cliente: "Marcos Rodrigues",
+        entrega: {
+            logradouro: "Rua Coronel Arthur Ferreira de Abreu",
+            numero: "65",
+            complemento: "5",
+            bairro: "Capão da Imbuia",
+            cep: "82810-070",
+            cidade: "Curitiba",
+            uf: "PR"
+        },
+        pedidos: [{
+            produto: "Notebook Samsung",
+            quantidade: 1,
+            valorTotalProduto: NumberDecimal(3523.00),
+            valorDesconto: NumberDecimal(352.30)
+        },
+        {
+            produto: "Monitor Dell 27",
+            quantidade: 2,
+            valorTotalProduto: NumberDecimal(1889.00),
+            valorDesconto: NumberDecimal(15.00)
+        }]       
+
+    },
+    {
+        _id: 02,
+        dataPedido: new ISODate(),
+        cliente: "Lana Goulart",
+        entrega: {
+            logradouro: "Rua Conde Bobadela",
+            numero: "180",
+            complemento: "S/N",
+            bairro: "Centro",
+            cep: "35400-970",
+            cidade: "Ouro Preto",
+            uf: "MG",
+        },
+        pedidos: [{
+            produto: "iPhone 13 Pro",
+            quantidade: 1,
+            valorTotalProduto: NumberDecimal(9176.00),
+            valorDesconto: NumberDecimal(300.00)
+    }]        
+    }, 
+])

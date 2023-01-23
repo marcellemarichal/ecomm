@@ -1,0 +1,131 @@
+db.getCollection('users').insertMany([
+    {
+        _id: 001,
+        nome: "Josué Lima",
+        email: "josuelima@example.com",
+        senha: "senhaDoJosue!",
+        dataCriacao: new ISODate(),
+        cpf: "405.596.110-30",
+        telefone: "(11) 54887-4974",
+        endereco: {
+            logradouro: "Rua Samambaiaçu",
+            numero: "365",
+            bairro: "Antônio de Carvalho",
+            complemento: "S/N",
+            cep: "08220-090",
+            cidade: "São Paulo",
+            uf: "SP"
+        },
+    },
+    {
+        _id: 002,
+        nome: "Fiona Silva",
+        email: "fionasilva@example.com",
+        senha: "fi123ona!",
+        dataCriacao: new ISODate("2023-01-11"),
+        cpf: "974.847.080-62",
+        telefone: "(11) 44790-2582",
+        endereco: {
+            logradouro: "Rua Samuel Schwarts",
+            numero: "750",
+            bairro: "Santa Maria",
+            complemento: "S/N",
+            cep: "09560-090",
+            cidade: "São Caetano do Sul",
+            uf: "SP"
+        }
+     },
+     {
+        _id: 003,
+        primeiroNome: "Carlos Junior",
+        email: "carlosjr@example.com",
+        senha: "carlos54321@",
+        dataCriacao: new ISODate("2023-01-12"),
+        cpf: "499.983.368-99",
+        telefone: "(11) 21497-5903",
+        endereco: {
+            logradouro: "Rua Samuel Schwarts",
+            numero: "15",
+            bairro: "Loteamento Caminhos de São Conrado",
+            complemento: "601",
+            cep: "13104-054",
+            cidade: "Campinas",
+            uf: "SP"
+        },
+    },
+
+    {
+        _id: 004,
+        nome: "Julia Mendes",
+        email: "juliamendes@example.com",
+        senha: "1234ju#",
+        dataCriacao: new ISODate("2023-01-13"),
+        cpf: "257.107.370-20",
+        telefone: "(51) 79012-2798",
+        endereco: {
+            logradouro: "Avenida Independência",
+            numero: "2052",
+            bairro: "Independência",
+            complemento: "302",
+            cep: "90035-075",
+            cidade: "Porto Alegre",
+            uf: "RS"
+        },
+    },
+
+    {
+        _id: 005,
+        nome: "Lana Goulart",
+        email: "lanag@example.com",
+        senha: "567@lana",
+        dataCriacao: new ISODate("2023-01-13"),
+        cpf: "442.247.536-34",
+        telefone: "(31) 16775-1783",
+        endereco: {
+            logradouro: "Rua Conde Bobadela",
+            numero: "180",
+            bairro: "Centro",
+            complemento: "S/N",
+            cep: "35400-970",
+            cidade: "Ouro Preto",
+            uf: "MG"
+        },
+    },
+
+    {
+        _id: 006,
+        nome: "Lucas Medeiros",
+        email: "medeirosluc@example.com",
+        senha: "medeiro$5432",
+        dataCriacao: new ISODate("2023-01-14"),
+        cpf: "867.905.435-62",
+        telefone: "(71) 72787-1824",
+        endereco: {
+            logradouro: "Rua Conceição do Almeida",
+            numero: "950",
+            bairro: "Nova Brasília de Valéria",
+            complemento: "2",
+            cep: "41307-600",
+            cidade: "Salvador",
+            uf: "BA"
+        },
+    },
+    {
+        _id: 007,
+        nome: "Marcos Rodrigues",
+        email: "marcosrodrigues@example.com",
+        senha: "8765marc!",
+        dataCriacao: new ISODate(),
+        cpf: "140.270.419-41",
+        telefone: "(41) 67930-1979",
+        endereco: {
+            logradouro: "Rua Coronel Arthur Ferreira de Abreu",
+            numero: "65",
+            complemento: "5",
+            bairro: "Capão da Imbuia",
+            cep: "82810-070",
+            cidade: "Curitiba",
+            uf: "PR"
+        },
+    }
+])

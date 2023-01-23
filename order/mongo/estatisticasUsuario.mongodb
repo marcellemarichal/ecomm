@@ -1,0 +1,25 @@
+db.users.aggregate([
+  {
+    $match: {
+      cliente: "Lana Goulart"
+    }
+  },
+  { 
+    $unwind: "$pedidos"
+  },
+  {
+    $group: {
+      _id:"estatisticas",
+      valorTotalSemDesconto: { $sum: { $multiply: ["$pedidos.valorTotalProduto" , "$pedidos.quantidade"]}},
+      valorTotalDosDescontos: { $sum: {$multiply: ["$pedidos.valorDesconto" , "$pedidos.quantidade"]}}
+    }
+  },
+  {
+    "$project": { quantidadeDePedidos: {$sum: "$pedidos.quantidade"},
+      somaValorTotal: "$valorTotalSemDesconto",
+      somaDescontos: "$valorTotalDosDescontos"
+    }
+  },
+  {
+    $out:"estatisticas"
+  }]).pretty();
