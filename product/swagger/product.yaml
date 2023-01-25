@@ -1,0 +1,42 @@
+openapi: 3.0.3
+info:
+  title: Ecomm project API
+  description: API desenvolvida para documentar o projeto Ecomm, durante o treinamento sobre HTTP e Swagger da Alura e PagoNxt
+  version: 0.1.0
+  termsOfService: https://developers.google.com/mobile/terms?hl=pt-br
+  contact:
+    name: Marcelle Marichal da Rosa
+    email: marcelle.rosa@pagonxt.com
+  license:
+    name: Licença GPLv3
+    url: https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html
+externalDocs:
+  description: Documentação
+  url: https://github.com/marcellemarichal
+paths:
+  /api/categories:
+    get:
+      tags:
+      - Categorias
+      summary: Lista categorias dos produtos com id, nome e status
+      responses:
+        200: 
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id: 
+                      type: integer
+                    nome:
+                      type: string
+                    status:
+                      type: string
+        404:
+          description: Categorias não encontradas
+          content:
+            application/json:
+              example: "Not Found"
