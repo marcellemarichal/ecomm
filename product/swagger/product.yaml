@@ -13,6 +13,18 @@ info:
 externalDocs:
   description: Documentação
   url: https://github.com/marcellemarichal
+components:
+  schemas:
+    categoria:
+      type: object
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        status:
+          type: string
+          enum: [ATIVA, INATIVA]
 paths:
   /api/categories:
     get:
@@ -27,14 +39,7 @@ paths:
               schema:
                 type: array
                 items:
-                  type: object
-                  properties:
-                    id: 
-                      type: integer
-                    nome:
-                      type: string
-                    status:
-                      type: string
+                  $ref: "#/components/schemas/categoria"
         404:
           description: Categorias não encontradas
           content:
@@ -59,43 +64,100 @@ paths:
               schema:
                   type: array
                   items:
-                    type: object
-                    properties:
-                      id: 
-                        type: integer
-                      nome:
-                        type: string
-                      status:
-                        type: string
+                    $ref: "#/components/schemas/categoria"
         404:
           description: Especialidade não encontrada
           content:
             application/json:
               example: "Not Found"
   /api/admin/categories:
-      post:
-        tags:
-        - Categorias
-        summary: Inserção de categorias
-        requestBody:
+    post:
+      tags:
+      - Categorias
+      summary: Inserção de categorias
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+      responses:
+        201:
+          description: Sucesso
           content:
             application/json:
               schema:
                 type: object
                 properties:
+                  id:
+                    type: integer
                   nome:
                     type: string
-        responses:
-          201:
-            description: Sucesso
-            content:
-              application/json:
-                schema:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    nome:
-                      type: string
-                    status:
-                      type: string
+                  status:
+                    type: string
+                    enum: [ATIVA, INATIVA]
+  /api/admin/categories/{id}:
+    parameters: 
+      - name: id
+        in: path
+        schema: 
+          type: integer
+        required: true
+    put:
+      tags:
+      - Categorias
+      summary: Alteração dos dados de categorias pelo ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/categoria"
+      responses:
+        202:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/categoria"
+        401:
+          description: Não autorizado
+          content:
+            applicaton/json:
+              example: Você não está autorizado a realizar esta ação
+    patch:
+      tags:
+      - Categorias
+      summary: Ativação de uma categoria pelo ID
+      responses:
+        202:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/categoria"
+        404:
+          description: Categoria não encontrada
+          content:
+            application/json:
+              example: Esta categoria não foi encontrada
+    delete:
+      tags:
+      - Categorias
+      summary: Remoção de uma categoria pelo ID
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              example: Categoria removida com sucesso
+        404:
+          description: Categoria não encontrada
+          content:
+            application/json:
+              example: Esta categoria não foi encontrada
