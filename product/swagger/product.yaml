@@ -40,3 +40,35 @@ paths:
           content:
             application/json:
               example: "Not Found"
+  /api/categories/{id}:
+    parameters: 
+      - name: id
+        in: path
+        schema: 
+          type: integer
+        required: true
+    get:
+      tags:
+      - Categorias
+      summary: Busca de categorias pelo ID
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id: 
+                        type: integer
+                      nome:
+                        type: string
+                      status:
+                        type: string
+        404:
+          description: Especialidade não encontrada
+          content:
+            application/json:
+              example: "Not Found"
