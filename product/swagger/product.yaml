@@ -72,3 +72,30 @@ paths:
           content:
             application/json:
               example: "Not Found"
+  /api/admin/categories:
+      post:
+        tags:
+        - Categorias
+        summary: Inserção de categorias
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  nome:
+                    type: string
+        responses:
+          201:
+            description: Sucesso
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    nome:
+                      type: string
+                    status:
+                      type: string
