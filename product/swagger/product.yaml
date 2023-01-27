@@ -25,12 +25,29 @@ components:
         status:
           type: string
           enum: [ATIVA, INATIVA]
+    produto:
+      type: object
+      properties:
+        id: 
+          type: integer
+        PRODUTO:
+          type: string
+        DESCRICAO:
+          type: string
+        SLUG:
+          type: string
+        PREÇO_UNITARIO:
+          type: string
+        QUANTIDADE_EM_ESTOQUE:
+          type: integer
+        ID_CATEGORIA:
+          type: integer
 paths:
   /api/categories:
     get:
       tags:
       - Categorias
-      summary: Lista categorias dos produtos com id, nome e status
+      summary: Listagem das categorias existentes
       responses:
         200: 
           description: Sucesso
@@ -83,6 +100,9 @@ paths:
               properties:
                 nome:
                   type: string
+                status:
+                    type: string
+                    enum: [ATIVA, INATIVA]
       responses:
         201:
           description: Sucesso
@@ -150,6 +170,127 @@ paths:
       tags:
       - Categorias
       summary: Remoção de uma categoria pelo ID
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              example: Categoria removida com sucesso
+        404:
+          description: Categoria não encontrada
+          content:
+            application/json:
+              example: Esta categoria não foi encontrada
+  /api/products:
+    get:
+      tags:
+      - Produtos
+      summary: Listagem dos produtos existentes
+      responses:
+        200: 
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/produto"
+        404:
+          description: Categorias não encontradas
+          content:
+            application/json:
+              example: "Not Found"
+  /api/products/{id}:
+    parameters: 
+      - name: id
+        in: path
+        schema: 
+          type: integer
+        required: true
+    get:
+      tags:
+      - Produtos
+      summary: Detalhamento de produtos pelo ID
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/produto"
+        404:
+          description: Especialidade não encontrada
+          content:
+            application/json:
+              example: "Not Found"
+  /api/admin/products:
+    post:
+      tags:
+      - Produtos
+      summary: Inserção de novos produtos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                PRODUTO:
+                  type: string
+                DESCRICAO:
+                  type: string
+                SLUG:
+                  type: string
+                PREÇO_UNITARIO:
+                  type: string
+                QUANTIDADE_EM_ESTOQUE:
+                  type: integer
+                ID_CATEGORIA:
+                  type: integer
+      responses:
+        201:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/produto"
+  /api/admin/products/{id}:
+    parameters: 
+      - name: id
+        in: path
+        schema: 
+          type: integer
+        required: true
+    put:
+      tags:
+      - Produtos
+      summary: Alteração dos dados de produtos pelo ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/produto"
+      responses:
+        202:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/produto"
+        401:
+          description: Não autorizado
+          content:
+            applicaton/json:
+              example: Você não está autorizado a realizar esta ação
+    delete:
+      tags:
+      - Produtos
+      summary: Remoção de um produto pelo ID
       responses:
         200:
           description: Sucesso
