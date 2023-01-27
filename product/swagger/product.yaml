@@ -83,7 +83,7 @@ paths:
                   items:
                     $ref: "#/components/schemas/categoria"
         404:
-          description: Especialidade não encontrada
+          description: Categoria não encontrada
           content:
             application/json:
               example: "Not Found"
@@ -221,7 +221,7 @@ paths:
                   items:
                     $ref: "#/components/schemas/produto"
         404:
-          description: Especialidade não encontrada
+          description: Produto não encontrado
           content:
             application/json:
               example: "Not Found"
