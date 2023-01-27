@@ -57,11 +57,6 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/categoria"
-        404:
-          description: Categorias não encontradas
-          content:
-            application/json:
-              example: "Not Found"
   /api/categories/{id}:
     parameters: 
       - name: id
@@ -194,12 +189,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/produto"
-        404:
-          description: Categorias não encontradas
-          content:
-            application/json:
-              example: "Not Found"
+                  $ref: "#/components/schemas/produto"       
   /api/products/{id}:
     parameters: 
       - name: id
