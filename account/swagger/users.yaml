@@ -126,7 +126,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/produto"
+                $ref: "#/components/schemas/usuario"
   /api/admin/users/{id}:
     parameters: 
       - name: id
