@@ -57,6 +57,11 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/categoria"
+        404:
+          description: Categoria não encontrada
+          content:
+            application/json:
+              example: "Not Found"
   /api/categories/{id}:
     parameters: 
       - name: id
