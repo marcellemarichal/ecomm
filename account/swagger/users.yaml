@@ -43,7 +43,7 @@ components:
         UF:
           type: string
 paths:
-  /api/users:
+  /api/admin/users:
     get:
       tags:
       - Usuários
@@ -62,32 +62,6 @@ paths:
           content:
             application/json:
               example: "Not Found"
-  /api/users/{id}:
-    parameters: 
-      - name: id
-        in: path
-        schema: 
-          type: integer
-        required: true
-    get:
-      tags:
-      - Usuários
-      summary: Detalhamento de usuários pelo ID
-      responses:
-        200:
-          description: Sucesso
-          content:
-            application/json:
-              schema:
-                  type: array
-                  items:
-                    $ref: "#/components/schemas/usuario"
-        404:
-          description: Usuário não encontrado
-          content:
-            application/json:
-              example: "Not Found"
-  /api/admin/users:
     post:
       tags:
       - Usuários
@@ -127,6 +101,31 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/usuario"
+  /api/admin/users/{id}:
+    parameters: 
+      - name: id
+        in: path
+        schema: 
+          type: integer
+        required: true
+    get:
+      tags:
+      - Usuários
+      summary: Detalhamento de usuários pelo ID
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/usuario"
+        404:
+          description: Usuário não encontrado
+          content:
+            application/json:
+              example: "Not Found"
   /api/admin/users/{id}:
     parameters: 
       - name: id
