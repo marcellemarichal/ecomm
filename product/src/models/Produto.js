@@ -8,7 +8,7 @@ const produtoSchema = new mongoose.Schema(
         slug: {type: String, match: /^[a-zA-Z\d-]+$/},
         preço_unitario: {type: Number, min: 0.01},
         quantidade_em_estoque: {type: Number, min: 1, max: 10000},
-        id_categoria: {type: mongoose.Schema.Types.ObjectId, match: /^[\da-z]{24}$/}
+        id_categoria: {type: mongoose.Schema.Types.ObjectId, ref: 'categorias', match: /^[\da-z]{24}$/}
     },
     {
         versionKey: false
