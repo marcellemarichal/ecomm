@@ -297,3 +297,62 @@ paths:
           content:
             application/json:
               example: Este produto não foi encontrado
+  /api/products/listByPrice:
+    parameters:
+    - name: max
+      in: query
+      schema:
+        type: number
+      required: true
+    - name: min
+      in: query
+      schema:
+        type: number
+      required: true   
+    get:
+      summary: Lista os produtos por faixa de preço
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/products"
+        404:
+          description: Produtos não encontrados
+  /api/products/listByCategory:
+    parameters:
+    - name: category
+      in: query
+      schema:
+        type: string
+      required: true
+    get:
+      summary: Lista os produtos da categoria determinada
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/products"
+        404:
+          description: Produtos não encontrados
+  /api/products/listByStock:
+    parameters:
+    - name: stock
+      in: query
+      schema:
+        type: number
+      required: true
+    get:
+      summary: Lista os produtos conforme seu estoque
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/products"
+        404:
+          description: Produtos não encontrados
