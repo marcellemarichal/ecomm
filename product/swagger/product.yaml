@@ -348,7 +348,7 @@ paths:
     get:
       summary: Lista os produtos conforme seu estoque
       responses:
-        200:
+        200
           description: Sucesso
           content:
             application/json:
