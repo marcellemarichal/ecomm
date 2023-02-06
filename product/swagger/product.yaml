@@ -310,6 +310,8 @@ paths:
         type: number
       required: true   
     get:
+      tags:
+      - Produtos
       summary: Lista os produtos por faixa de preço
       responses:
         200:
@@ -317,17 +319,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/products"
+                $ref: "#/components/schemas/produto"
         404:
           description: Produtos não encontrados
   /api/products/listByCategory:
     parameters:
-    - name: category
+    - name: categoria
       in: query
       schema:
         type: string
       required: true
     get:
+      tags:
+        - Produtos
       summary: Lista os produtos da categoria determinada
       responses:
         200:
@@ -335,24 +339,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/products"
+                $ref: "#/components/schemas/produto"
         404:
           description: Produtos não encontrados
   /api/products/listByStock:
     parameters:
-    - name: stock
+    - name: estoque
       in: query
       schema:
         type: number
       required: true
     get:
+      tags:
+      - Produtos
       summary: Lista os produtos conforme seu estoque
       responses:
-        200
+        200:
           description: Sucesso
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/products"
+                $ref: "#/components/schemas/produto"
         404:
           description: Produtos não encontrados
