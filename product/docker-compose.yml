@@ -1,12 +1,14 @@
 version: "3.9"
 services:
   product:
-    image: ecomm-product:latest
-    build: marcellemarichal/ecomm-product
-    container_name: my-ecomm-product
-    networks:
-      - compose-bridge
-
-networks:
-  compose-bridge:
-    driver: bridge
+    build: ./product
+    container_name: ecomm-product
+  mongo:
+    image: mongo
+    container_name: mongo-ecomm
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
