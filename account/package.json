@@ -1,5 +1,5 @@
 {
-  "name": "account",
+  "name": "account",  
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -10,7 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "package.json": "^2.0.1",
-    "swagger-ui-express": "^4.6.0"
+    "package.json": "^2.0.1"
   }
 }
