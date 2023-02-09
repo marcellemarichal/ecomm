@@ -1,5 +1,6 @@
 FROM node
-WORKDIR /app
+WORKDIR /ecomm/account
 COPY . .
 RUN npm install
-ENTRYPOINT npm test
+EXPOSE 3001
+ENTRYPOINT npm start
