@@ -1,4 +1,5 @@
 const {Pagamentos} = require('../models')
+const pagamentos = require('../models/pagamentos')
 
 class PagamentoController {
     static async detalhaUmPagamento(req, res){
@@ -21,6 +22,18 @@ class PagamentoController {
             const {id, status} = await Pagamentos.create(novoPagamento)
             return res.status(201).set('location',`/admin/pagamentos/${id}`).json({ id, status})
         } catch (error) {
+            return res.status(500).json(error.message)
+        }
+    }
+
+    static async confirmaPagamento(req, res){
+        const { id } = req.params
+        const novoStatus = req.body
+        try {
+            await Pagamentos.update(novoStatus, { where: { id: Number(id)}})
+            const pagamentoConfirmado = await Pagamentos.findOne( { where: { id: Number(id)}})
+            return res.status(200).json(pagamentoConfirmado)
+        } catch (error){
             return res.status(500).json(error.message)
         }
     }
