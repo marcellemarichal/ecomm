@@ -20,7 +20,28 @@ class PagamentoController {
         const novoPagamento = {...req.body, status: 'CRIADO'}
         try {
             const {id, status} = await Pagamentos.create(novoPagamento)
-            return res.status(201).set('location',`/admin/pagamentos/${id}`).json({ id, status})
+            const objetoResposta = { 
+                id,
+                status: novoPagamento.status,
+                links: [
+                    {
+                        rel: 'self',
+                        method: 'GET',
+                        href: `http://finance:3000/admin/pagamentos/${id}`
+                      },
+                      {
+                        rel: 'activate',
+                        method: 'PUT',
+                        href: `http://finance:3000/admin/pagamentos/${id}/confirmar`
+                      },
+                      {
+                        rel: 'cancel',
+                        method: 'PUT',
+                        href: `http://finance:3000/admin/pagamentos/${id}/cancelar`
+                      },
+                ]
+            };
+            return res.status(201).set('location',`/admin/pagamentos/${id}`).json({objetoResposta})
         } catch (error) {
             return res.status(500).json(error.message)
         }
