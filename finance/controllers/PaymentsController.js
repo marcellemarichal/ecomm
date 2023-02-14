@@ -38,9 +38,9 @@ class PagamentoController {
                         rel: 'cancel',
                         method: 'PUT',
                         href: `http://finance:3000/admin/pagamentos/${id}/cancelar`
-                      },
+                    },
                 ]
-            };
+            }; 
             return res.status(201).set('location',`/admin/pagamentos/${id}`).json({objetoResposta})
         } catch (error) {
             return res.status(500).json(error.message)
@@ -51,9 +51,13 @@ class PagamentoController {
         const { id } = req.params
         const novoStatus = req.body
         try {
+            if(novoStatus.status === 'CONFIRMADO' || novoStatus.status === 'CANCELADO'){
             await Pagamentos.update(novoStatus, { where: { id: Number(id)}})
             const pagamentoConfirmado = await Pagamentos.findOne( { where: { id: Number(id)}})
             return res.status(200).json(pagamentoConfirmado)
+            } else {
+                return res.status(406).json('Esta ação não é permitida')
+            }
         } catch (error){
             return res.status(500).json(error.message)
         }
