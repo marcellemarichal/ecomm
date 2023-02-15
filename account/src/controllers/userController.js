@@ -3,7 +3,11 @@ import usuarios from "../models/Usuario.js"
 class userController {
     static listarUsuarios = (req, res) => {
         usuarios.find((err, usuarios) => {
-            res.status(200).json(usuarios)
+            if(err){
+                res.status(404).send({message: `${err.message} - Lista de usuários não localizada`})
+            } else {
+                res.status(200).json(usuarios);
+            }
         })
     }
 
@@ -12,7 +16,7 @@ class userController {
 
         usuarios.findById(id, (err, usuarios) => {
             if(err){
-                res.status(400).send({message: `${err.message} - ID do usuario não localizado`})
+                res.status(404).send({message: `${err.message} - ID do usuario não localizado`})
             } else {
                 res.status(200).send(usuarios);
             }
