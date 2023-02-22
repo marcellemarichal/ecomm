@@ -1,16 +1,19 @@
 {
   "name": "account",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "node test/createUserAccount.test.js"
+    "dev": "nodemon server.js",
+    "start": "node --ext js,json,yaml,env server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Marcelle Rosa",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "package.json": "^2.0.1",
-    "swagger-ui-express": "^4.6.0"
+    "swagger-ui-express": "^4.6.0",
+    "yamljs": "^0.3.0"
   }
 }
