@@ -1,5 +1,4 @@
 const {Pagamentos} = require('../models')
-const pagamentos = require('../models/pagamentos')
 
 class PagamentoController {
     static async detalhaUmPagamento(req, res){
@@ -19,7 +18,7 @@ class PagamentoController {
     static async criaPagamento(req, res){
         const novoPagamento = {...req.body, status: 'CRIADO'}
         try {
-            const {id, status} = await Pagamentos.create(novoPagamento)
+            const {id} = await Pagamentos.create(novoPagamento)
             const objetoResposta = { 
                 id,
                 status: novoPagamento.status,
