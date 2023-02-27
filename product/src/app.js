@@ -2,8 +2,9 @@ import express from "express";
 import db from "./config/dbConnect.js"
 import routes from "./routes/index.js"
 import swaggerUi from 'swagger-ui-express';
-import yaml from 'yamljs';
-const swaggerDoc = yaml.load('../swagger/product.yaml');
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const swaggerDoc = require('../swagger/product.json');
 
 db.on("error", console.log.bind(console, "Erro de conexão"))
 db.once("open", () => {
