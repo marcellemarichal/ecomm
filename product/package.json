@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Wanderson Macêdo",
   "license": "MIT",
@@ -19,6 +19,8 @@
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "28.1.0",
+    "nodemon": "^2.0.15",
+    "supertest": "6.2.4"
   }
 }
