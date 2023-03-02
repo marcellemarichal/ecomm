@@ -1,7 +1,10 @@
-const bodyParser = require('body-parser')
-const pagamentos = require('./pagamentosRoute.js')
+import bodyParser from "body-parser"
+import pagamentos from "./pagamentosRoute.js"
+import express from "express";
 
-module.exports = app => {
+const routes = (app) => {
     app.use(bodyParser.json())
-    app.use(pagamentos)   
+    app.use(express.json(), pagamentos)
 }
+
+export default routes
