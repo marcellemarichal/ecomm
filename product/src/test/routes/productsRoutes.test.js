@@ -1,10 +1,10 @@
 import app from '../../app.js';
-import { describe, expect, it, jest } from 'jest@globals';
+import { describe, expect, it, jest } from '@jest/globals';
 import request from 'supertest';
 
 let server;
 beforeEach(() => {
-    const port = 3000;
+    const port = 3002;
     server = app.listen(port);
 })
 
