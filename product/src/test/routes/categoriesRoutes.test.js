@@ -4,7 +4,7 @@ import request from 'supertest';
 
 let server;
 beforeEach(() => {
-  const port = 3003
+  const port = 3004;
   server = app.listen(port)
 })
 
