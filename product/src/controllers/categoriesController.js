@@ -52,7 +52,7 @@ class categoryController {
             if(err){
                 res.status(500).send({message: err.message})
             } else {
-                res.status(200).send({message: 'Categoria removida com sucesso'})
+                res.status(204).send({message: 'Categoria removida com sucesso'})
             }
         })
     }

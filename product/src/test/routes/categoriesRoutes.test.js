@@ -14,50 +14,51 @@ afterEach(() => {
 
 describe('GET em /api/categories', () => {
   it('Deve listar todas as categorias', async () => {
-    await request(app)
+    const result = await request(app)
       .get(`/api/categories`)
       .expect('content-type', /json/)
       .set('Accept', 'application/json')
       .expect(200)
-  })
+      expect(result.body[0].nome).toEqual('pets');
+  }) 
 })
 
 let idResposta;
-describe('GET em /api/categories/id', () => {
-  it('Deve detalhar uma categoria', async () => {
-    const resposta = await request(app)
-      .get(`/api/categories/${idResposta}`)
-      .expect('content-type', /json/)
-      .set('Accept', 'application/json')
-      .expect(200)
-    idResposta = resposta.body.content.id;
-  })
-})
-
 describe('POST em /api/admin/categories', () => {
   it('Deve criar uma categoria', async () => {
-    await request(app)
+    const resposta = await request(app)
       .post(`/api/admin/categories`)
       .send({
         nome: 'pets',
         status: 'ativa',
       })
       .expect(201)
+      idResposta = resposta.body['_id'];
+    })
+  })
+  
+describe('GET em /api/categories/id', () => {
+  it('Deve detalhar uma categoria', async () => {
+    await request(app)
+      .get(`/api/categories/${idResposta}`)
+      .expect('content-type', /json/)
+      .set('Accept', 'application/json')
+      .expect(200)
   })
 })
 
 describe('PUT em /api/admin/categories/id', () => {
   test.each([
-    ['nome', { nome: 'pets' }],
+    ['nome', { nome: 'teste' }],
     ['status', { status: 'inativa' }]
   ])('Deve alterar o campo %s', async (chave, param) => {
     const requisicao = { request };
     const spy = jest.spyOn(requisicao, 'request');
-    await requisicao.request(app)
-      .put(`/api/produtos/${idResposta}`)
+     await requisicao.request(app)
+      .put(`/api/admin/categories/${idResposta}`)
       .send(param)
-      .expect(204);
-
+      .expect(200);
+      
     expect(spy).toHaveBeenCalled();
   })
 })
