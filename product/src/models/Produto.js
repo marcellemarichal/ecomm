@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const produtoSchema = new mongoose.Schema(
     {
         id: {type: Number},
-        nome: {type: String, required: true, match: /^[^\d.,][^.,]{3,}/},
+        produto: {type: String, required: true, match: /^[^\d.,][^.,]{3,}/},
         descricao: {type: String, required: true},
         slug: {type: String, match: /^[a-zA-Z\d-]+$/},
         preço_unitario: {type: Number, min: 0.01},
@@ -15,6 +15,6 @@ const produtoSchema = new mongoose.Schema(
     }
 )
 
-const produtos = mongoose.model("products", produtoSchema)
+const produtos = mongoose.model("products", produtoSchema);
 
 export default produtos;

@@ -65,7 +65,6 @@ describe('PUT em /api/admin/categories/id', () => {
 
 describe('DELETE em /api/admin/categories/id', () => {
   it('Deve deletar uma categoria', async () => {
-
     await request(app)
       .delete(`/api/admin/categories/${idResposta}`)
       .expect(204)
