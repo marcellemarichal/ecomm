@@ -6,7 +6,7 @@ const {
   Model
 } = require('sequelize');
 
-(sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
   class Pagamentos extends Model {
     static associate(models) {
       
@@ -58,5 +58,3 @@ const {
   });
   return Pagamentos;
 };
-
-export default Pagamentos;

@@ -46,8 +46,8 @@ describe('PUT em /pagamentos/id', () => {
     ['nomeCartao', {nomeCartao: 'TESTE SILVA SAURO' }],
     ['numeroCartao', {numeroCartao: '5090546098601646' }],
     ['vencimentoCartao', {vencimentoCartao: '2026-03' }],
-    ['cvv', {cvv: '415' }]
-    ['status', {status: 'CONFIRMADO' }]
+    ['cvv', {cvv: '415' }],
+    ['status', {status: 'CONFIRMADO' }],
     ['status', {status: 'CANCELADO' }]
   ])('Deve alterar o campo %s', async (chave, param) => {
     const requisicao = { request };
