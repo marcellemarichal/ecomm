@@ -2,11 +2,10 @@
   "name": "finance",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "app.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --verbose",
-    "start": "nodemon ./index.js"
+    "start": "nodemon ./app.js"
   },
   "keywords": [],
   "author": "",

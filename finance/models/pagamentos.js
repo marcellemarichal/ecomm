@@ -1,12 +1,9 @@
 'use strict';
-import { createRequire } from 'node:module';
-const require = createRequire(import.meta.url);
-
 const {
   Model
 } = require('sequelize');
 
-export default (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   class Pagamentos extends Model {
     static associate(models) {
       

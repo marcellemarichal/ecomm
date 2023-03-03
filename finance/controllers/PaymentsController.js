@@ -1,4 +1,4 @@
-import Pagamentos from '../models/pagamentos.js'
+const { Pagamentos } = require ('../models')
 
 class PagamentoController {
     static async detalhaUmPagamento(req, res) {
@@ -71,4 +71,4 @@ class PagamentoController {
     }
 }
 
-export default PagamentoController
+module.exports = PagamentoController

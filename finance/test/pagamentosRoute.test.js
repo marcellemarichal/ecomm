@@ -1,6 +1,6 @@
-import app from '../src/app';
-import { describe, expect, it, jest } from '@jest/globals';
-import request from 'supertest';
+const app = require('../app.js');
+const { describe, expect, it, beforeEach, afterEach } = require('@jest/globals');
+const request = require('supertest');
 
 let server;
 beforeEach(() => {
@@ -26,7 +26,7 @@ describe('POST em /pagamentos', () => {
         status: 'CRIADO'
         })
       .expect(201)
-      idResposta = resposta.body['_id'];
+      idResposta = resposta.body['id'];
     })
   })
   
