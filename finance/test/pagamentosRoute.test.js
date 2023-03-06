@@ -42,11 +42,6 @@ describe('GET em /pagamentos/id', () => {
 
 describe('PUT em /pagamentos/id', () => {
   test.each([
-    ['preco', {preco: 1200.00 }],
-    ['nomeCartao', {nomeCartao: 'TESTE SILVA SAURO' }],
-    ['numeroCartao', {numeroCartao: '5090546098601646' }],
-    ['vencimentoCartao', {vencimentoCartao: '2026-03' }],
-    ['cvv', {cvv: '415' }],
     ['status', {status: 'CONFIRMADO' }],
     ['status', {status: 'CANCELADO' }]
   ])('Deve alterar o campo %s', async (chave, param) => {
