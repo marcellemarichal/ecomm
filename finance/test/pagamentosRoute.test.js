@@ -1,4 +1,4 @@
-const app = require('../app.js');
+const app = require('../app.js')
 const { describe, expect, it, beforeEach, afterEach } = require('@jest/globals');
 const request = require('supertest');
 
@@ -20,13 +20,13 @@ describe('POST em /pagamentos', () => {
       .send({
         preco: 3000.00,
         nomeCartao: 'TESTE SANTOS DA SILVA',
-        numeroCartao: '5090565412365134',
+        numeroCartao: '4745474100045722',
         vencimentoCartao: '2028-09',
         cvv: '642',
         status: 'CRIADO'
         })
       .expect(201)
-      idResposta = resposta.body['id'];
+      idResposta = resposta.body.objetoResposta['id'];
     })
   })
   
