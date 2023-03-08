@@ -14,7 +14,12 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "package.json": "^2.0.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
     "swagger-ui-express": "^4.6.0",
     "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
   }
 }

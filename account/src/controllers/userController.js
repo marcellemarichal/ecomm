@@ -2,6 +2,10 @@ import encriptarSenha from "../helpers/passwordEncrypt.js"
 import usuarios from "../models/Usuario.js"
 
 class userController {
+    static login = (req, res) => {
+        res.status(204).send();
+    }
+
     static listarUsuarios = (req, res) => {
         usuarios.find((err, usuarios) => {
             if(err){
