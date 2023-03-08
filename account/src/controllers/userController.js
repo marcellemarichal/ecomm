@@ -1,3 +1,4 @@
+import encriptarSenha from "../helpers/passwordEncrypt.js"
 import usuarios from "../models/Usuario.js"
 
 class userController {
@@ -26,6 +27,9 @@ class userController {
     }
 
     static cadastrarUsuario = (req, res) => {
+        const hashSenha = encriptarSenha(req.body.senha)
+        req.body.senha = hashSenha
+
         let usuario = new usuarios(req.body);
         usuario.save((err) => {
 
