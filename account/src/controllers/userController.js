@@ -1,8 +1,19 @@
 import encriptarSenha from "../helpers/passwordEncrypt.js"
 import usuarios from "../models/Usuario.js"
+import jwt from "jsonwebtoken"
+
+function criaTokenJWT(usuario) {
+    const payload = {
+        id: usuario.id
+    }
+    const token = jwt.sign(payload, process.env.CHAVE_JWT);
+    return token;  
+}
 
 class userController {
     static login = (req, res) => {
+        const token = criaTokenJWT(req.user);
+        res.set('Authorization', token);
         res.status(204).send();
     }
 
