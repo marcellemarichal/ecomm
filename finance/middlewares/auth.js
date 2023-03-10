@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const bearerStrategy = new BearerStrategy(async (token, done) => {
 	try {
-		const valido = jwt.verify(token, process.env.APP_SECRET);
+		const valido = jwt.verify(token, process.env.CHAVE_JWT);
 
 		done(null, valido, { token: token });
 	} catch (erro) {
