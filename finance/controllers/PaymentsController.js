@@ -1,4 +1,13 @@
 const { Pagamentos } = require('../models')
+const jwt = require('jsonwebtoken')
+
+function criaTokenJWT(pagamento) {
+    const payload = {
+        id: pagamento.id
+    }
+    const token = jwt.sign(payload, process.env.CHAVE_JWT);
+    return token;  
+}
 
 class PagamentoController {
     static async detalhaUmPagamento(req, res) {

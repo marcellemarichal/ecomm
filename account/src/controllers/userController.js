@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 
 function criaTokenJWT(usuario) {
     const payload = {
-        id: usuario.id
+        id: usuario._id
     }
     const token = jwt.sign(payload, process.env.CHAVE_JWT);
     return token;  
@@ -13,8 +13,7 @@ function criaTokenJWT(usuario) {
 class userController {
     static login = (req, res) => {
         const token = criaTokenJWT(req.user);
-        res.set('Authorization', token);
-        res.status(204).send();
+        res.set('Authorization', token).status(204).send();
     }
 
     static listarUsuarios = (req, res) => {
@@ -79,6 +78,14 @@ class userController {
             }
         })
     }
+
+    static encontraEmail = async (email, res) => {
+		const user = await usuarios.findOne({ email: email });
+
+		if (!user) {
+			return res.status(401).json({ message: 'Usuário não encontrado' });
+		}
+	};
 }
 
 export default userController
