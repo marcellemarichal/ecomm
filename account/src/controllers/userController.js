@@ -83,7 +83,7 @@ class UserController {
 		const user = await Usuario.findOne({ email: email });
 
 		if (!user) {
-			return res.status(401).json({ message: 'Usuário não encontrado' });
+			return res.status(404).json({ message: 'Usuário não encontrado' });
 		}
 	};
 }

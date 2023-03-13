@@ -12,7 +12,7 @@ class OrderController {
 
         Pedido.findById(id, (err, pedidos) => {
             if(err){
-                res.status(400).send({message: `${err.message} - ID do pedido não localizado`})
+                res.status(404).send({message: `${err.message} - ID do pedido não localizado`})
             } else {
                 res.status(200).send(pedidos);
             }
