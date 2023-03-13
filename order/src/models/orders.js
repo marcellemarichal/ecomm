@@ -26,6 +26,6 @@ const pedidosSchema = new mongoose.Schema(
     }
 )
 
-const pedidos = mongoose.model("pedidos", pedidosSchema)
+const Pedido = mongoose.model("pedidos", pedidosSchema)
 
-export default pedidos;
+export default Pedido;

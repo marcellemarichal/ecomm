@@ -1,8 +1,8 @@
-import pedidos from '../models/orders.js'
+import Pedido from '../models/orders.js'
 
-class orderController {
+class OrderController {
     static listarPedidos = (req, res) => {
-        pedidos.find((err, pedidos) => {
+        Pedido.find((err, pedidos) => {
             res.status(200).json(pedidos)
         })
     }
@@ -10,7 +10,7 @@ class orderController {
     static listarPedidoPorID = (req,res) => {
         const id = req.params.id;
 
-        pedidos.findById(id, (err, pedidos) => {
+        Pedido.findById(id, (err, pedidos) => {
             if(err){
                 res.status(400).send({message: `${err.message} - ID do pedido não localizado`})
             } else {
@@ -22,7 +22,7 @@ class orderController {
     }
 
     static cadastrarPedido = (req, res) => {
-        let pedido = new pedidos(req.body);
+        let pedido = new Pedido(req.body);
         pedido.save((err) => {
 
             if(err) {
@@ -36,7 +36,7 @@ class orderController {
     static atualizarPedido = (req, res) => {
         const id = req.params.id;
 
-        pedidos.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+        Pedido.findByIdAndUpdate(id, {$set: req.body}, (err) => {
             if(err) {
                 res.status(500).send({message: err.message})
             } else {
@@ -48,7 +48,7 @@ class orderController {
     static excluirPedido = (req, res) => {
         const id = req.params.id;
 
-        pedidos.findByIdAndDelete(id, (err) => {
+        Pedido.findByIdAndDelete(id, (err) => {
             if(err){
                 res.status(500).send({message: err.message})
             } else {
@@ -58,4 +58,4 @@ class orderController {
     }
 }
 
-export default orderController
+export default OrderController
