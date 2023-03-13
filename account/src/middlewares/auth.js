@@ -1,7 +1,7 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from 'passport-local';
 import { Strategy as BearerStrategy } from "passport-http-bearer"
-import usuarios from '../models/Usuario.js'
+import Usuario from '../models/Usuario.js'
 import bcryptjs from 'bcryptjs';
 import jwt from "jsonwebtoken"
 
@@ -18,7 +18,7 @@ async function verificaSenha(senha, hashSenha) {
         session: false
     }, async (email, senha, done) => {
         try {
-            const usuario = await usuarios.findOne({email: email});
+            const usuario = await Usuario.findOne({email: email});
             if (!usuario) {
                 return done(null, false, {
                     message: `Não existe usuário com o email ${email}`
@@ -40,7 +40,7 @@ async function verificaSenha(senha, hashSenha) {
         async (token, done) => {
             try {
                 const payload = jwt.verify(token, process.env.CHAVE_JWT)
-                const usuario = await usuarios.findById(payload.id)
+                const usuario = await Usuario.findById(payload.id)
                 done(null, usuario);
             } catch (error) {
                 done(error)

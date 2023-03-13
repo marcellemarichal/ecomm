@@ -1,5 +1,5 @@
 import encriptarSenha from "../helpers/passwordEncrypt.js"
-import usuarios from "../models/Usuario.js"
+import Usuario from "../models/Usuario.js"
 import jwt from "jsonwebtoken"
 
 function criaTokenJWT(usuario) {
@@ -10,14 +10,14 @@ function criaTokenJWT(usuario) {
     return token;  
 }
 
-class userController {
+class UserController {
     static login = (req, res) => {
         const token = criaTokenJWT(req.user);
         res.set('Authorization', token).status(204).send();
     }
 
     static listarUsuarios = (req, res) => {
-        usuarios.find((err, usuarios) => {
+        Usuario.find((err, usuarios) => {
             if(err){
                 res.status(404).send({message: `${err.message} - Lista de usuários não localizada`})
             } else {
@@ -29,7 +29,7 @@ class userController {
     static listarUsuarioPorID = (req,res) => {
         const id = req.params.id;
 
-        usuarios.findById(id, (err, usuarios) => {
+        Usuario.findById(id, (err, usuarios) => {
             if(err){
                 res.status(404).send({message: `${err.message} - ID do usuario não localizado`})
             } else {
@@ -44,7 +44,7 @@ class userController {
         const hashSenha = encriptarSenha(req.body.senha)
         req.body.senha = hashSenha
 
-        let usuario = new usuarios(req.body);
+        let usuario = new Usuario(req.body);
         usuario.save((err) => {
 
             if(err) {
@@ -58,7 +58,7 @@ class userController {
     static atualizarUsuario = (req, res) => {
         const id = req.params.id;
 
-        usuarios.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+        Usuario.findByIdAndUpdate(id, {$set: req.body}, (err) => {
             if(err) {
                 res.status(500).send({message: err.message})
             } else {
@@ -70,7 +70,7 @@ class userController {
     static excluirUsuario = (req, res) => {
         const id = req.params.id;
 
-        usuarios.findByIdAndDelete(id, (err) => {
+        Usuario.findByIdAndDelete(id, (err) => {
             if(err){
                 res.status(500).send({message: err.message})
             } else {
@@ -80,7 +80,7 @@ class userController {
     }
 
     static encontraEmail = async (email, res) => {
-		const user = await usuarios.findOne({ email: email });
+		const user = await Usuario.findOne({ email: email });
 
 		if (!user) {
 			return res.status(401).json({ message: 'Usuário não encontrado' });
@@ -88,4 +88,4 @@ class userController {
 	};
 }
 
-export default userController
+export default UserController
