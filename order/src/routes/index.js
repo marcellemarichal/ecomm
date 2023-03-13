@@ -1,8 +1,8 @@
 import express from "express";
-import Usuario from "./usersRoutes.js"
+import Pedido from "./ordersRoute.js"
 
 const routes = (app) => {
-    app.use(express.json(), Usuario)
+   app.use(express.json(), Pedido)
 }
 
 export default routes

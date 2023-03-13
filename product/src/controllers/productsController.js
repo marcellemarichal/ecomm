@@ -1,8 +1,8 @@
-import produtos from "../models/Produto.js"
+import Produto from "../models/Produto.js"
 
-class productController {
+class ProductController {
     static listarProdutos = (req, res) => {
-        produtos.find((err, produtos) => {
+        Produto.find((err, produtos) => {
             res.status(200).json(produtos)
         })
     }
@@ -10,7 +10,7 @@ class productController {
     static listarProdutoPorID = (req,res) => {
         const id = req.params.id;
 
-        produtos.findById(id, (err, produtos) => {
+        Produto.findById(id, (err, produtos) => {
             if(err){
                 res.status(404).send({message: `${err.message} - ID do produto não localizado`})
             } else {
@@ -22,7 +22,7 @@ class productController {
     }
 
     static cadastrarProduto = (req, res) => {
-        let produto = new produtos(req.body);
+        let produto = new Produto(req.body);
         produto.save((err) => {
 
             if(err) {
@@ -36,7 +36,7 @@ class productController {
     static atualizarProduto = (req, res) => {
         const id = req.params.id;
 
-        produtos.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+        Produto.findByIdAndUpdate(id, {$set: req.body}, (err) => {
             if(err) {
                 res.status(500).send({message: err.message})
             } else {
@@ -48,7 +48,7 @@ class productController {
     static excluirProduto = (req, res) => {
         const id = req.params.id;
 
-        produtos.findByIdAndDelete(id, (err) => {
+        Produto.findByIdAndDelete(id, (err) => {
             if(err){
                 res.status(500).send({message: err.message})
             } else {
@@ -58,4 +58,4 @@ class productController {
     }
 }
 
-export default productController
+export default ProductController
