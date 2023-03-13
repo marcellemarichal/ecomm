@@ -1,4 +1,4 @@
-db.getCollection('users').insertMany([
+db.getCollection('usuarios').insertMany([
     {
         _id: 001,
         nome: "Josué Lima",

@@ -1,6 +1,6 @@
-import app from './src/app.js'
+const app = require('./app.js')
 
-const port = process.env.PORT;
+const port = process.env.PORT
 
 app.listen(port, () => {
     console.log(`Servidor executando em http://localhost:${port}`)

@@ -52,7 +52,7 @@ class ProductController {
             if(err){
                 res.status(500).send({message: err.message})
             } else {
-                res.status(200).send({message: 'Produto removido com sucesso'})
+                res.status(204).send({message: 'Produto removido com sucesso'})
             }
         })
     }

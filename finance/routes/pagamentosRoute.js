@@ -2,7 +2,7 @@ const { Router } = require('express')
 const PagamentoController = require('../controllers/PaymentsController.js')
 const authBearer = require('../middlewares/auth.js')
 
-const router = Router()
+const router = express.Router();
 
 router.get('/pagamentos/:id', authBearer, PagamentoController.detalhaUmPagamento)
 router.post('/pagamentos', authBearer, PagamentoController.criaPagamento)
