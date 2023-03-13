@@ -32,7 +32,7 @@ describe('POST em /api/admin/products', () => {
         produto: 'teste',
         descricao: 'teste',
         slug: 'teste-teste',
-        preço_unitario: 5000,
+        preco_unitario: 5000,
         quantidade_em_estoque: 12
       })
       .expect(201)
