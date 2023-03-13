@@ -1,8 +1,8 @@
-import categorias from "../models/Categoria.js"
+import Categoria from "../models/Categoria.js"
 
-class categoryController {
+class CategoryController {
     static listarCategorias = (req, res) => {
-        categorias.find((err, categorias) => {
+        Categoria.find((err, categorias) => {
             res.status(200).json(categorias)
         })
     }
@@ -10,7 +10,7 @@ class categoryController {
     static listarCategoriaPorID = (req,res) => {
         const id = req.params.id;
 
-        categorias.findById(id, (err, categorias) => {
+        Categoria.findById(id, (err, categorias) => {
             if(err){
                 res.status(400).send({message: `${err.message} - ID da categoria não localizado`})
             } else {
@@ -22,7 +22,7 @@ class categoryController {
     }
 
     static cadastrarCategoria = (req, res) => {
-        let categoria = new categorias(req.body);
+        let categoria = new Categoria(req.body);
         categoria.save((err) => {
 
             if(err) {
@@ -36,7 +36,7 @@ class categoryController {
     static atualizarCategoria = (req, res) => {
         const id = req.params.id;
 
-        categorias.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+        Categoria.findByIdAndUpdate(id, {$set: req.body}, (err) => {
             if(err) {
                 res.status(500).send({message: err.message})
             } else {
@@ -48,7 +48,7 @@ class categoryController {
     static excluirCategoria = (req, res) => {
         const id = req.params.id;
 
-        categorias.findByIdAndDelete(id, (err) => {
+        Categoria.findByIdAndDelete(id, (err) => {
             if(err){
                 res.status(500).send({message: err.message})
             } else {
@@ -58,4 +58,4 @@ class categoryController {
     }
 }
 
-export default categoryController
+export default CategoryController

@@ -1,14 +1,14 @@
 import express from "express";
-import categoryController from "../controllers/categoriesController.js";
+import CategoryController from "../controllers/categoriesController.js";
 import { authBearer } from "../middlewares/auth.js";
 
 const router = express.Router();
 
 router
-    .get("/api/categories", categoryController.listarCategorias)
-    .get("/api/categories/:id", categoryController.listarCategoriaPorID)
-    .post("/api/admin/categories", authBearer, categoryController.cadastrarCategoria)
-    .put("/api/admin/categories/:id", authBearer, categoryController.atualizarCategoria)
-    .delete("/api/admin/categories/:id", authBearer, categoryController.excluirCategoria)
+    .get("/api/categories", CategoryController.listarCategorias)
+    .get("/api/categories/:id", CategoryController.listarCategoriaPorID)
+    .post("/api/admin/categories", authBearer, CategoryController.cadastrarCategoria)
+    .put("/api/admin/categories/:id", authBearer, CategoryController.atualizarCategoria)
+    .delete("/api/admin/categories/:id", authBearer, CategoryController.excluirCategoria)
 
 export default router;

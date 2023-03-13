@@ -8,6 +8,6 @@ const categoriaSchema = new mongoose.Schema(
     }
 );
 
-const categorias = mongoose.model("categorias", categoriaSchema);
+const Categoria = mongoose.model("categorias", categoriaSchema);
 
-export default categorias;
+export default Categoria;
