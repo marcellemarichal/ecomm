@@ -1,130 +1,130 @@
 db.products.insertMany([
   {
-    "PRODUTO": "Notebook Samsung",
-    "DESCRICAO": "Samsung Book Core i5-1135G7, 8G, 256GB SSD, Iris Xe, 15.6, FHD, W11 Cinza",
-    "SLUG": "notebook-samsung",
-    "PREÇO_UNITARIO": NumberDecimal("3523.00"),
-    "QUANTIDADE_EM_ESTOQUE": 1,
-    "CATEGORIA": "INFORMATICA"
+    "produto": "Notebook Samsung",
+    "descricao": "Samsung Book Core i5-1135G7, 8G, 256GB SSD, Iris Xe, 15.6, FHD, W11 Cinza",
+    "slug": "notebook-samsung",
+    "preco_unitario": NumberDecimal("3523.00"),
+    "quantidade_em_estoque": 1,
+    "categoria": "informatica"
   },
   {
-    "PRODUTO": "Sofá 3 lugares",
-    "DESCRICAO": "Sofá 3 Lugares Retrátil e Reclinável Cama Inbox Compact 1,80m Velusoft Cinza",
-    "SLUG": "sofa-3-lugares",
-    "PREÇO_UNITARIO": NumberDecimal("2500.00"),
-    "QUANTIDADE_EM_ESTOQUE": 1,
-    "CATEGORIA": "MÓVEIS"
+    "produto": "Sofá 3 lugares",
+    "descricao": "Sofá 3 Lugares Retrátil e Reclinável Cama Inbox Compact 1,80m Velusoft Cinza",
+    "slug": "sofa-3-lugares",
+    "preco_unitario": NumberDecimal("2500.00"),
+    "quantidade_em_estoque": 1,
+    "categoria": "moveis"
   },
   {
-    "PRODUTO": "Clean Architecture",
-    "DESCRICAO": "Arquitetura limpa - O guia do artesão para estrutura e design de software por Robert C. Martin (Uncle Bob)",
-    "SLUG": "livro-clean-architecture",
-    "PREÇO_UNITARIO": NumberDecimal("102.90"),
-    "QUANTIDADE_EM_ESTOQUE": 2,
-    "CATEGORIA": "LIVROS"
+    "produto": "Clean Architecture",
+    "descricao": "Arquitetura limpa - O guia do artesão para estrutura e design de software por Robert C. Martin (Uncle Bob)",
+    "slug": "livro-clean-architecture",
+    "preco_unitario": NumberDecimal("102.90"),
+    "quantidade_em_estoque": 2,
+    "categoria": "livros"
   },
   {
-    "PRODUTO": "Mesa de jantar 6 lugares",
-    "DESCRICAO": "Mesa de Jantar 6 Lugares Lótus Oppa Design - Caramel",
-    "SLUG": "mesa-de-jantar-6-lugares",
-    "PREÇO_UNITARIO": NumberDecimal("3678.98"),
-    "QUANTIDADE_EM_ESTOQUE": 1,
-    "CATEGORIA": "MÓVEIS"
+    "produto": "Mesa de jantar 6 lugares",
+    "descricao": "Mesa de Jantar 6 Lugares Lótus Oppa Design - Caramel",
+    "slug": "mesa-de-jantar-6-lugares",
+    "preco_unitario": NumberDecimal("3678.98"),
+    "quantidade_em_estoque": 1,
+    "categoria": "moveis"
   },
   {
-    "PRODUTO": "iPhone 13 Pro",
-    "DESCRICAO": "Apple iPhone 13 Pro (256 GB) - Verde-alpino",
-    "SLUG": "iphone-13-pro",
-    "PREÇO_UNITARIO": NumberDecimal("9176.00"),
-    "QUANTIDADE_EM_ESTOQUE": 6,
-    "CATEGORIA": "CELULARES"
+    "produto": "iPhone 13 Pro",
+    "descricao": "Apple iPhone 13 Pro (256 GB) - Verde-alpino",
+    "slug": "iphone-13-pro",
+    "preco_unitario": NumberDecimal("9176.00"),
+    "quantidade_em_estoque": 6,
+    "categoria": "celulares"
   },
   {
-    "PRODUTO": "Monitor Dell 27",
-    "DESCRICAO": "Monitor Dell de 27 P2722H, Preto",
-    "SLUG": "monitor-dell-27",
-    "PREÇO_UNITARIO": NumberDecimal("1889.00"),
-    "QUANTIDADE_EM_ESTOQUE": 3,
-    "CATEGORIA": "INFORMATICA"
+    "produto": "Monitor Dell 27",
+    "descricao": "Monitor Dell de 27 P2722H, Preto",
+    "slug": "monitor-dell-27",
+    "preco_unitario": NumberDecimal("1889.00"),
+    "quantidade_em_estoque": 3,
+    "categoria": "informatica"
   },
   {
-    "PRODUTO": "Implementing Domain-Driven Design",
-    "DESCRICAO": "Implementando Domain-Driven Design por Vaughn Vernon",
-    "SLUG": "livro-implementing-ddd",
-    "PREÇO_UNITARIO": NumberDecimal("144.07"),
-    "QUANTIDADE_EM_ESTOQUE": 3,
-    "CATEGORIA": "LIVROS"
+    "produto": "Implementing Domain-Driven Design",
+    "descricao": "Implementando Domain-Driven Design por Vaughn Vernon",
+    "slug": "livro-implementing-ddd",
+    "preco_unitario": NumberDecimal("144.07"),
+    "quantidade_em_estoque": 3,
+    "categoria": "livros"
   },
   {
-    "PRODUTO": "Jogo de pneus",
-    "DESCRICAO": "Pneu Barum by Continental Aro 13 Bravuris 5hm 175 70r13 82t",
-    "SLUG": "jogo-de-pneus-continental-13",
-    "PREÇO_UNITARIO": NumberDecimal("1276.79"),
-    "QUANTIDADE_EM_ESTOQUE": 1,
-    "CATEGORIA": "AUTOMOTIVA"
+    "produto": "Jogo de pneus",
+    "descricao": "Pneu Barum by Continental Aro 13 Bravuris 5hm 175 70r13 82t",
+    "slug": "jogo-de-pneus-continental-13",
+    "preco_unitario": NumberDecimal("1276.79"),
+    "quantidade_em_estoque": 1,
+    "categoria": "automotiva"
   },
   {
-    "PRODUTO": "Clean Code",
-    "DESCRICAO": "Código limpo - Habilidades práticas do Agile Software por Robert C. Martin (Uncle Bob)",
-    "SLUG": "livro-clean",
-    "PREÇO_UNITARIO": NumberDecimal("95.17"),
-    "QUANTIDADE_EM_ESTOQUE": 1,
-    "CATEGORIA": "LIVROS"
+    "produto": "Clean Code",
+    "descricao": "Código limpo - Habilidades práticas do Agile Software por Robert C. Martin (Uncle Bob)",
+    "slug": "livro-clean",
+    "preco_unitario": NumberDecimal("95.17"),
+    "quantidade_em_estoque": 1,
+    "categoria": "livros"
   },
   {
-    "PRODUTO": "Galaxy S22 Ultra",
-    "DESCRICAO": "Smartphone Samsung Galaxy S22 Ultra 256GB 5G com caneta S PEN - Preto, Câmera Tripla 108MP Selfie 40MP, RAM 12GB, Tela 6.8",
-    "SLUG": "celular-galaxy-22-ultra",
-    "PREÇO_UNITARIO": NumberDecimal("8549.10"),
-    "QUANTIDADE_EM_ESTOQUE": 5,
-    "CATEGORIA": "CELULARES"
+    "produto": "Galaxy S22 Ultra",
+    "descricao": "Smartphone Samsung Galaxy S22 Ultra 256GB 5G com caneta S PEN - Preto, Câmera Tripla 108MP Selfie 40MP, RAM 12GB, Tela 6.8",
+    "slug": "celular-galaxy-22-ultra",
+    "preco_unitario": NumberDecimal("8549.10"),
+    "quantidade_em_estoque": 5,
+    "categoria": "celulares"
   },
   {
-    "PRODUTO": "Macbook Pro 16",
-    "DESCRICAO": "Notebook Apple MacBook Pro de 13 polegadas Chip M2 da Apple com CPU de oito núcleos e GPU de dez núcleos, de 512 GB SSD Prateado",
-    "SLUG": "notebook-macbook-pro-16",
-    "PREÇO_UNITARIO": NumberDecimal("31752.00"),
-    "QUANTIDADE_EM_ESTOQUE": 1,
-    "CATEGORIA": "INFORMATICA"
+    "produto": "Macbook Pro 16",
+    "descricao": "Notebook Apple MacBook Pro de 13 polegadas Chip M2 da Apple com CPU de oito núcleos e GPU de dez núcleos, de 512 GB SSD Prateado",
+    "slug": "notebook-macbook-pro-16",
+    "preco_unitario": NumberDecimal("31752.00"),
+    "quantidade_em_estoque": 1,
+    "categoria": "informatica"
   },
   {
-    "PRODUTO": "Refactoring Improving the Design of Existing Code",
-    "DESCRICAO": "Refatoração - Aperfeiçoando o Design de Códigos Existentes por Martin Fowler",
-    "SLUG": "livro-refactoring",
-    "PREÇO_UNITARIO": NumberDecimal("173.90"),
-    "QUANTIDADE_EM_ESTOQUE": 1,
-    "CATEGORIA": "LIVROS"
+    "produto": "Refactoring Improving the Design of Existing Code",
+    "descricao": "Refatoração - Aperfeiçoando o Design de Códigos Existentes por Martin Fowler",
+    "slug": "livro-refactoring",
+    "preco_unitario": NumberDecimal("173.90"),
+    "quantidade_em_estoque": 1,
+    "categoria": "livros"
   },
   {
-    "PRODUTO": "Cama queen size",
-    "DESCRICAO": "Cama Queen Size Dener Oppa Design - Mel",
-    "SLUG": "cama-queen-size-dener",
-    "PREÇO_UNITARIO": NumberDecimal("3100.00"),
-    "QUANTIDADE_EM_ESTOQUE": 2,
-    "CATEGORIA": "MÓVEIS"
+    "produto": "Cama queen size",
+    "descricao": "Cama Queen Size Dener Oppa Design - Mel",
+    "slug": "cama-queen-size-dener",
+    "preco_unitario": NumberDecimal("3100.00"),
+    "quantidade_em_estoque": 2,
+    "categoria": "moveis"
   },
   {
-    "PRODUTO": "Central multimidia",
-    "DESCRICAO": "Kit Combo Central Multimídia 9 Polegadas Mp5 Automotivo Aparelho 2 Din Som Pra Carro Sistema Operacional Android 12 Bluetooth Usb Gps Integrado Conexão Wifi Função Speedplay que Simula Carplay e Android Auto Mais Aplicativos Como Spotify Waze Youtube WhatsApp, Tela Resistiva, Microfone Externo Função Multi Tela 2gb Ram e 32gb de Memória interna, Entradas para Encostos de Cabeça, Comando de Volante e Para Câmera Frontal ou Traseira, Moldura Painel Kia Sorento 2013 a 2014 Cor Preta, Câmera de ré",
-    "SLUG": "central-multimidia-automotiva",
-    "PREÇO_UNITARIO": NumberDecimal("711.18"),
-    "QUANTIDADE_EM_ESTOQUE": 1,
-    "CATEGORIA": "AUTOMOTIVA"
+    "produto": "Central multimidia",
+    "descricao": "Kit Combo Central Multimídia 9 Polegadas Mp5 Automotivo Aparelho 2 Din Som Pra Carro Sistema Operacional Android 12 Bluetooth Usb Gps Integrado Conexão Wifi Função Speedplay que Simula Carplay e Android Auto Mais Aplicativos Como Spotify Waze Youtube WhatsApp, Tela Resistiva, Microfone Externo Função Multi Tela 2gb Ram e 32gb de Memória interna, Entradas para Encostos de Cabeça, Comando de Volante e Para Câmera Frontal ou Traseira, Moldura Painel Kia Sorento 2013 a 2014 Cor Preta, Câmera de ré",
+    "slug": "central-multimidia-automotiva",
+    "preco_unitario": NumberDecimal("711.18"),
+    "quantidade_em_estoque": 1,
+    "categoria": "automotiva"
   },
   {
-    "PRODUTO": "Building Microservices",
-    "DESCRICAO": "Building Microservices English Edition por Sam Newman",
-    "SLUG": "livro-building-microservices",
-    "PREÇO_UNITARIO": NumberDecimal("300.28"),
-    "QUANTIDADE_EM_ESTOQUE": 2,
-    "CATEGORIA": "LIVROS"
+    "produto": "Building Microservices",
+    "descricao": "Building Microservices English Edition por Sam Newman",
+    "slug": "livro-building-microservices",
+    "preco_unitario": NumberDecimal("300.28"),
+    "quantidade_em_estoque": 2,
+    "categoria": "livros"
   },
   {
-    "PRODUTO": "Galaxy Tab S8",
-    "DESCRICAO": "Tablet Samsung Galaxy S8 5G SM-X706B 256gb Grafite 8gb Ram",
-    "SLUG": "tablet-galaxy-tab-s8",
-    "PREÇO_UNITARIO": NumberDecimal("5939.10"),
-    "QUANTIDADE_EM_ESTOQUE": 4,
-    "CATEGORIA": "INFORMATICA"
+    "produto": "Galaxy Tab S8",
+    "descricao": "Tablet Samsung Galaxy S8 5G SM-X706B 256gb Grafite 8gb Ram",
+    "slug": "tablet-galaxy-tab-s8",
+    "preco_unitario": NumberDecimal("5939.10"),
+    "quantidade_em_estoque": 4,
+    "categoria": "informatica"
   }
 ])

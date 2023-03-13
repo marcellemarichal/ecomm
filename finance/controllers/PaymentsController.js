@@ -1,4 +1,4 @@
-const { Pagamentos } = require('../models')
+const { Pagamentos } = require ('../models')
 
 class PagamentoController {
     static async detalhaUmPagamento(req, res) {
@@ -11,7 +11,7 @@ class PagamentoController {
             })
             return res.status(200).json({ id, preco, nomeCartao, numeroCartao, vencimentoCartao, status, createdAt, updatedAt })
         } catch (error) {
-            return res.status(500).json(error.message)
+            return res.status(500).json(error)
         }
     }
 

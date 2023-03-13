@@ -1,7 +1,9 @@
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const pagamentos = require('./pagamentosRoute.js')
 
-module.exports = app => {
+const routes = (app) => {
     app.use(bodyParser.json())
-    app.use(pagamentos)   
+    app.use(pagamentos)
 }
+
+module.exports = routes;
