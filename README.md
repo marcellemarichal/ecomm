@@ -1,5 +1,5 @@
 # Ecommerce
-Projeto de Ecommerce desenvolvido durante o programa LevelUp da Alura
+Projeto de Ecommerce criado durante o programa LevelUp da Alura
 
 ## Instalação
 
