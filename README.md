@@ -26,3 +26,21 @@ Este projeto foi analisado a partir da metodologia [The Twelve Factor App](https
 | Dev/prod parity | A implantação é contínua e a lacuna entre desenvolvimento e produção é pequena; os ambientes são semelhantes em todos os serviços do projeto. O tempo entre deploys leva horas ou minutos, dependendo da complexidade, a autoria de código é apenas de uma pessoa, e os ambientes de desenvolvimento estão de acordo, por exemplo, os bancos de dados que são utilizados em testes e desenvolvimento também utilizam os mesmos em produção.|
 | Logs | Os logs estão bem definidos, em casos de erros há mensagens que mostram qual foi o problema, e em casos de sucesso as respostas HTTP indicam corretamente o que está acontecendo. |
 | Admin processes | Processos de administração e gerenciamento não foram implementados neste projeto.|
+
+
+## Microsserviços
+
+Também houve uma análise a partir da [arquitetura de microsserviços](https://microservices.io/). Abaixo, uma relação mostrando quais microsserviços foram utilizados neste projeto.
+
+| Microsserviço | Descrição |
+|---------------|-----------|
+| Domain Services | |
+| Application Service | |
+| API Gateway | |
+| Process Aggregator | |
+| Edge Service | |
+| Single Database | |
+| Mult Databases | |
+| Asynchronous Events‌ | |
+| Log Aggregation | |
+| Metric Aggregation | |
