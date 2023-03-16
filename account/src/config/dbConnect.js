@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect('mongodb://admin:secret@mongo:27017/ecomm-account?authSource=admin')
+mongoose.connect(process.env.DB_ACC)
 
 let db = mongoose.connection;
 

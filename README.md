@@ -16,7 +16,7 @@ Este projeto foi analisado a partir da metodologia [The Twelve Factor App](https
 |--------|-------------|
 | Codebase | Este fator é devidamente utilizado por conta do versionamento de código no git e github, onde os repositórios guardam a base de código.|
 | Dependencies | Foram instaladas pelo NPM e são controladas no package-json.|
-| Config | O projeto armazena a conexão com a base de dados em um arquivo de configuração (config/dbconnect). Mas há dois pontos de melhoria: esse arquivo não deveria ser versionado por causa das credenciais, ou seja, será colocado no git ignore. Além deste, o segundo ponto é a utilização de variáveis de ambiente, que será o próximo ponto a ser implementado.| 
+| Config | O projeto armazena a conexão com a base de dados em um arquivo de configuração (config/dbconnect), tendo sua string de conexão em uma variável de ambiente por questões de segurança.| 
 | Backing services | São os bancos de dados MongoDB e MySql, utilizados para armazenar dados em todas as APIs do projeto.|
 | Build, release, run | O projeto ainda está na etapa de build, portanto as duas seguintes não se aplicam, mas conforme a definição deste fator, os estágios de construção estão devidamente separados.|
 | Processes | Este fator é utilizado, pois a aplicação não armazena estado ao ser executada. Todas as informações necessárias são salvas em serviços de apoio.|
