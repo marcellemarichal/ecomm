@@ -32,6 +32,8 @@ Este projeto foi analisado a partir da metodologia [The Twelve Factor App](https
 
 Também houve uma análise a partir da [arquitetura de microsserviços](https://microservices.io/). Abaixo, uma relação mostrando quais microsserviços foram utilizados neste projeto.
 
+### Padrões de Microsserviços
+
 | Microsserviço | aplicação |
 |---------------|-----------|
 | Serviços de Domínio | sim |
@@ -43,3 +45,29 @@ Também houve uma análise a partir da [arquitetura de microsserviços](https://
 | Eventos ass‌íncronos | não |
 | Agregação de Logs | não |
 | Agregação de Métricas | não |
+
+### Aspectos de Microsserviços
+
+#### Padronização das Stacks
+
+Todos os serviços foram desenvolvidos com a linguagem JavaScript, tendo como ponto de melhoria a ativação e correção pelo ESLint.
+
+#### Solução para service discovery
+
+Para referenciar o envio das requisições para os servidores sem problemas de direcionamento, pode-se utilizar uma ferramenta de load balance. 
+
+#### Aspectos de segurança
+
+Questões de segurança são aplicadas com hash das senhas e token de autorização JWT.
+
+#### Tecnologias a adotar para deploy e build
+
+Para o build, uma ferramenta útil é o ESLint, a ser ativado, além de testes automatizados. Para o deploy, ferramentas como Jenkins, Travis CI ou GitHub Actions.
+
+#### Tolerância a falhas em aplicações síncronas 
+
+As abordagens de circuit breaker e cache são as mais indicadas em caso de falhas em aplicações síncronas como esta, ambas poupam o servidor de sobrecargas.
+
+#### Quando usar comunicação assíncrona
+
+Faz sentido usar essa comunicação em situações como no serviço de pedidos, já que nesse caso não há a necessidade de obter uma resposta imediata da compra total. Nesse caso, não há problema de os processos ocorrerem por baixo dos panos e a notificação chegar posteriormente.
