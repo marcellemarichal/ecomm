@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect('mongodb+srv://admin:FQLTYrZpXFuFPc5j@ecomm.quvcoiz.mongodb.net/ecomm-order')
+mongoose.connect(process.env.DB_ORDER)
 
 let db = mongoose.connection;
 
