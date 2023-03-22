@@ -14,7 +14,7 @@ Este projeto foi analisado a partir da metodologia [The Twelve Factor App](https
 
 | Fator | Descrição |
 |--------|-------------|
-| Codebase | Este fator é devidamente utilizado por conta do versionamento de código no git e github, onde os repositórios guardam a base de código.|
+| Codebase | Este fator é utilizado por conta do versionamento de código no git e github, onde os repositórios guardam a base de código. No entanto, não está 100% alinhado com os 12 fatores, pois o projeto não utiliza um repositório para cada cada aplicação, e sim um mono repo.|
 | Dependencies | Foram instaladas pelo NPM e são controladas no package-json.|
 | Config | O projeto armazena a conexão com a base de dados em um arquivo de configuração (config/dbconnect), tendo sua string de conexão em uma variável de ambiente por questões de segurança.| 
 | Backing services | São os bancos de dados MongoDB e MySql, utilizados para armazenar dados em todas as APIs do projeto.|
@@ -36,10 +36,10 @@ Também houve uma análise a partir da [arquitetura de microsserviços](https://
 |---------------|-----------|
 | Serviços de Domínio | sim |
 | Serviços de negócio | sim |
-| API Gateway | sim |
+| API Gateway | não |
 | Agregador de processos | sim |
 | Edge Service | não |
-| DB único ou múltiplos DBs  | múltiplos |
-| Eventos ass‌íncronos | sim |
+| DB único ou múltiplos DBs | múltiplos |
+| Eventos ass‌íncronos | não |
 | Agregação de Logs | não |
 | Agregação de Métricas | não |
